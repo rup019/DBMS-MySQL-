@@ -1,0 +1,31 @@
+
+CREATE TABLE Student(
+    `Name`     VARCHAR(50),
+    Age      INT,
+    RollNo   INT Primary KEY
+);
+
+INSERT INTO Student 
+VALUES
+('Rupin',19,101),
+('Rohan',16,121),
+('Goram',18,181);
+
+SELECT * FROM Student;
+
+
+
+CREATE TABLE Marks(
+    RollNo     INT PRIMARY KEY,
+    `Subject`  VARCHAR(50),
+    Marks      INT,
+    Grade   CHAR(50)
+);
+INSERT INTO Marks
+VALUES
+(101,'Maths',80,'A'),
+(121,'Phy',75,'B'),
+(181,'Chem',90,'A'),
+(191,'Chem',90,'A');
+
+SELECT *FROM Marks;
