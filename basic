@@ -1,6 +1,6 @@
 
 CREATE TABLE Student(
-    `Name`     VARCHAR(50),
+    Name     VARCHAR(50),
     Age      INT,
     RollNo   INT Primary KEY
 );
@@ -17,7 +17,7 @@ SELECT * FROM Student;
 
 CREATE TABLE Marks(
     RollNo     INT PRIMARY KEY,
-    `Subject`  VARCHAR(50),
+    Subject  VARCHAR(50),
     Marks      INT,
     Grade   CHAR(50)
 );
@@ -29,3 +29,34 @@ VALUES
 (191,'Chem',90,'A');
 
 SELECT *FROM Marks;
+
+SHOW TABLES;
+DESC Student;
+
+/*ALTER*/
+ALTER TABLE Student      /* ADD COLUMN */
+ADD  Email VARCHAR(50);
+
+ALTER TABLE Student          /* MODIFY COLUMN */
+MODIFY Name VARCHAR(100);
+
+ALTER TABLE Student                   /* RENAME COLUMN NAME */
+RENAME COLUMN Name TO Student_Name;
+
+/* ALTER TABLE Student
+DROP COLUMN Email;  */                 /* DELETE A COLUMN */
+
+/*ALTER TABLE Student
+RENAME TO Students;
+SELECT * FROM Students;
+*/
+
+/* DML-Manages the actual data inside the database */
+/* DDL- TABLE OPERATIONS */
+
+
+
+
+
+
+
