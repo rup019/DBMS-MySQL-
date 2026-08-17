@@ -1,6 +1,5 @@
-
 CREATE TABLE Student(
-    Name     VARCHAR(50),
+    Name     VARCHAR(10),
     Age      INT,
     RollNo   INT Primary KEY
 );
@@ -13,14 +12,13 @@ VALUES
 
 SELECT * FROM Student;
 
-
-
 CREATE TABLE Marks(
     RollNo     INT PRIMARY KEY,
-    Subject  VARCHAR(50),
+    Subject  VARCHAR(10),
     Marks      INT,
-    Grade   CHAR(50)
+    Grade   CHAR(5)
 );
+
 INSERT INTO Marks
 VALUES
 (101,'Maths',80,'A'),
@@ -30,12 +28,10 @@ VALUES
 
 SELECT *FROM Marks;
 
-SHOW TABLES;
-DESC Student;
-
 /*ALTER*/
 ALTER TABLE Student      /* ADD COLUMN */
-ADD  Email VARCHAR(50);
+ADD  Email VARCHAR(100);
+
 
 ALTER TABLE Student          /* MODIFY COLUMN */
 MODIFY Name VARCHAR(100);
@@ -43,8 +39,20 @@ MODIFY Name VARCHAR(100);
 ALTER TABLE Student                   /* RENAME COLUMN NAME */
 RENAME COLUMN Name TO Student_Name;
 
-/* ALTER TABLE Student
-DROP COLUMN Email;  */                 /* DELETE A COLUMN */
+ALTER TABLE Student
+DROP COLUMN Email;    
+               /* REMOVE A COLUMN */
+SELECT * FROM Student;
+
+/*DELETE FROM Student;*/      /* DELETE ALL ROWS */
+
+DELETE FROM Student          /* DELETE SELECTED ROWS */
+WHERE Age > 16;
+
+   
+
+TRUNCATE TABLE Student;     /* REMOVES ALL DATA,THE TABLE REMAINS */
+SELECT *FROM Student;
 
 /*ALTER TABLE Student
 RENAME TO Students;
@@ -53,10 +61,3 @@ SELECT * FROM Students;
 
 /* DML-Manages the actual data inside the database */
 /* DDL- TABLE OPERATIONS */
-
-
-
-
-
-
-
